@@ -5,11 +5,22 @@ import { useState } from 'react';
 export default function Home() {
   const [resumeDropdownOpen, setResumeDropdownOpen] = useState(false);
 
+  const handleDownload = (format: 'pdf' | 'docx') => {
+    const filename = format === 'pdf' ? 'resume.pdf' : 'resume.docx';
+    const link = document.createElement('a');
+    link.href = `/${filename}`;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setResumeDropdownOpen(false);
+  };
+
   return (
     <div className="desktop">
       <img className="background" src="/img/background.svg" alt="background" />
       <header className="header">
-        <div className="name">John Angelo Cabalfin</div>
+        <div className="name">Benjamin I. Ramos III</div>
         <div className="resume-button" style={{ position: 'relative' }}>
           <button
             className="text-wrapper"
@@ -45,7 +56,7 @@ export default function Home() {
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  setResumeDropdownOpen(false);
+                  handleDownload('pdf');
                 }}
                 style={{
                   display: 'block',
@@ -63,7 +74,7 @@ export default function Home() {
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  setResumeDropdownOpen(false);
+                  handleDownload('docx');
                 }}
                 style={{
                   display: 'block',
@@ -93,7 +104,10 @@ export default function Home() {
           </p>
         </div>
         <div className="intro-buttons">
-          <button className="projects-button">
+          <button className="projects-button" onClick={() => {
+            const projectsSection = document.getElementById('projects-section');
+            projectsSection?.scrollIntoView({ behavior: 'smooth' });
+          }}>
             <div className="div">Projects</div>
           </button>
           <button className="projects-button-wrapper">
@@ -119,10 +133,12 @@ export default function Home() {
               To me, good software — like good stories — is built with care and meant to endure.
             </p>
           </div>
-          <div className="image"></div>
+          <div className="image">
+            <img className="" src="/img/okra.jpg" alt="profile" />
+          </div>
         </div>
       </div>
-      <div className="div-2">
+      <div className="div-2" id="projects-section">
         <div className="div-3">
           <div className="text-wrapper-2">Projects</div>
           <img className="img" src="/img/image.svg" alt="divider" />
@@ -131,43 +147,43 @@ export default function Home() {
           {[
             {
               id: 1,
-              image: "/img/image.png",
-              title: "The Green Knight",
-              tags: ["CSS3", "HTML5", "JavaScript"],
+              image: "/img/sad.jpg",
+              title: "Review Clinic",
+              tags: ["Flutter", "Supabase"],
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
-              githubVector: "/img/vector-10.svg",
-              projectVector: "/img/vector-2.svg",
+                "A web application designed to help medical professionals manage patient reviews and clinic operations. Features include patient feedback submission, review analytics, and appointment scheduling. Built with a focus on user experience and accessibility for healthcare providers.",
+              githubVector: "/img/github_logo.png",
+              projectVector: "/img/folder.jpg",
             },
             {
               id: 2,
-              image: "/img/project-image-3.png",
-              title: "The Green Knight",
+              image: "/img/database.jpeg",
+              title: "Mr. Pares Inventory System",
               tags: ["CSS3", "HTML5", "JavaScript"],
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
-              githubVector: "/img/vector-6.svg",
-              projectVector: "/img/vector-3.svg",
+                "An inventory management system built for a local restaurant to track stock levels, manage suppliers, and optimize ordering processes. Includes real-time inventory updates, low-stock alerts, and comprehensive reporting features to streamline business operations.",
+              githubVector: "/img/github_logo.png",
+              projectVector: "/img/folder.jpg",
             },
             {
               id: 3,
-              image: "/img/project-image.png",
-              title: "The Green Knight",
+              image: "/img/discrete.jpg",
+              title: "PSMath LMS",
               tags: ["CSS3", "HTML5", "JavaScript"],
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
-              githubVector: "/img/vector.svg",
-              projectVector: "/img/vector-5.svg",
+                "A Learning Management System designed for mathematics education. Features include interactive problem sets, progress tracking, and instructor dashboards for managing student learning. Includes support for discrete mathematics topics with visualization tools.",
+              githubVector: "/img/github_logo.png",
+              projectVector: "/img/folder.jpg",
             },
             {
               id: 4,
-              image: "/img/project-image-2.png",
-              title: "The Green Knight",
+              image: "/img/networking.jpg",
+              title: "Network Scanner",
               tags: ["CSS3", "HTML5", "JavaScript"],
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
-              githubVector: "/img/vector-7.svg",
-              projectVector: "/img/vector-8.svg",
+                "A network diagnostic tool that scans and analyzes network infrastructure. Provides detailed reports on connected devices, network topology, and security vulnerabilities. Designed for IT administrators to maintain network health and identify potential issues.",
+              githubVector: "/img/github_logo.png",
+              projectVector: "/img/folder.jpg",
             },
           ].map((project) => (
             <div key={project.id} className="project-card">
@@ -224,7 +240,7 @@ export default function Home() {
           <div className="text-wrapper-3">gelcabalfin@gmail.com</div>
         </div>
         <div className="div-3">
-          <p className="contact-copyright">© John Angelo Cabalfin 2026</p>
+          <p className="contact-copyright">© Benjamin I. Ramos III 2026</p>
         </div>
         <div className="social-links">
           <div className="img-wrapper">
