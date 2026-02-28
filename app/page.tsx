@@ -1,11 +1,83 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Home() {
+  const [resumeDropdownOpen, setResumeDropdownOpen] = useState(false);
+
   return (
     <div className="desktop">
       <img className="background" src="/img/background.svg" alt="background" />
       <header className="header">
         <div className="name">John Angelo Cabalfin</div>
-        <div className="resume-button">
-          <div className="text-wrapper">Download Resume</div>
+        <div className="resume-button" style={{ position: 'relative' }}>
+          <button
+            className="text-wrapper"
+            onClick={() => setResumeDropdownOpen(!resumeDropdownOpen)}
+            style={{
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              background: 'none',
+              border: 'none',
+              padding: 0,
+            }}
+          >
+            Download Resume
+            <span style={{ fontSize: '12px' }}>▼</span>
+          </button>
+          {resumeDropdownOpen && (
+            <div
+              style={{
+                position: 'absolute',
+                top: '100%',
+                left: 0,
+                backgroundColor: '#4e6a57',
+                borderRadius: '8px',
+                marginTop: '8px',
+                minWidth: '180px',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                zIndex: 10,
+              }}
+            >
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setResumeDropdownOpen(false);
+                }}
+                style={{
+                  display: 'block',
+                  padding: '12px 16px',
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  fontWeight: 600,
+                  borderBottom: '1px solid rgba(255,255,255,0.1)',
+                }}
+              >
+                Download PDF
+              </a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setResumeDropdownOpen(false);
+                }}
+                style={{
+                  display: 'block',
+                  padding: '12px 16px',
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  fontWeight: 600,
+                }}
+              >
+                Download DOCX
+              </a>
+            </div>
+          )}
         </div>
       </header>
       <div className="intro-section">

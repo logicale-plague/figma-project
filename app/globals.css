@@ -86,6 +86,13 @@ a {
   flex: 0 0 auto;
   background-color: #4e6a57;
   border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.desktop .resume-button:hover {
+  background-color: #3d5144;
+  box-shadow: 0 4px 12px rgba(78, 106, 87, 0.3);
+  transform: translateY(-2px);
 }
 
 .desktop .text-wrapper {
@@ -178,6 +185,13 @@ a {
   border-radius: 20px;
   cursor: pointer;
   border: none;
+  transition: all 0.3s ease;
+}
+
+.desktop .projects-button:hover {
+  background-color: #3d5144;
+  box-shadow: 0 4px 12px rgba(78, 106, 87, 0.3);
+  transform: translateY(-2px);
 }
 
 .desktop .div {
@@ -206,6 +220,13 @@ a {
   border-color: #4e6a57;
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.desktop .projects-button-wrapper:hover {
+  background-color: rgba(78, 106, 87, 0.1);
+  border-color: #3d5144;
+  transform: translateY(-2px);
 }
 
 .desktop .projects-button-2 {
@@ -494,6 +515,12 @@ a {
   border: 1px solid;
   border-color: #4e6a57;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.desktop .button:hover {
+  background-color: rgba(78, 106, 87, 0.1);
+  transform: translateY(-2px);
 }
 
 .desktop .button-2 {
@@ -537,6 +564,13 @@ a {
   background-color: #4e6a57;
   border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.desktop .button-3:hover {
+  background-color: #3d5144;
+  box-shadow: 0 4px 12px rgba(78, 106, 87, 0.3);
+  transform: translateY(-2px);
 }
 
 .desktop .button-4 {
@@ -582,6 +616,12 @@ a {
   line-height: normal;
   text-decoration: underline;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.desktop .project-description-2:hover {
+  color: #4e6a57;
+  transform: translateX(4px);
 }
 
 .desktop .contact-info {
