@@ -1,65 +1,168 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="desktop">
+      <img className="background" src="/img/background.svg" alt="background" />
+      <header className="header">
+        <div className="name">John Angelo Cabalfin</div>
+        <div className="resume-button">
+          <div className="text-wrapper">Download Resume</div>
+        </div>
+      </header>
+      <div className="intro-section">
+        <div className="intro-text-container">
+          <p className="intro-title">
+            I design and develop reliable systems with a human-centered approach.
+          </p>
+          <img className="line" src="/img/line-1.svg" alt="line" />
+          <p className="intro-description">
+            I'm a Computer Science graduate from Iloilo who enjoys building structured, maintainable
+            systems that solve real-world problems. With a foundation in software development and a
+            growing interest in UX, I focus on clarity, usability, and long-term thinking.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="intro-buttons">
+          <button className="projects-button">
+            <div className="div">Projects</div>
+          </button>
+          <button className="projects-button-wrapper">
+            <div className="projects-button-2">Contact</div>
+          </button>
         </div>
-      </main>
+      </div>
+      <div className="intro-section">
+        <div className="frame">
+          <div className="frame-2">
+            <div className="about-me-title">About Me</div>
+            <p className="about-me-description">
+              I'm currently staying in Iloilo city with the dream of breaking into tech. I'm drawn
+              to building structured, reliable systems designed with long-term clarity in mind.
+              <br />
+              <br />
+              Outside of tech, I volunteer at local animal shelters — an experience that has shaped
+              my sense of responsibility and patience. <br />
+              <br />I'm also inspired by fantasy literature, where thoughtful world-building and
+              strong systems bring stories to life.
+              <br />
+              <br />
+              To me, good software — like good stories — is built with care and meant to endure.
+            </p>
+          </div>
+          <div className="image"></div>
+        </div>
+      </div>
+      <div className="div-2">
+        <div className="div-3">
+          <div className="text-wrapper-2">Projects</div>
+          <img className="img" src="/img/image.svg" alt="divider" />
+        </div>
+        <div className="projects-list">
+          {[
+            {
+              id: 1,
+              image: "/img/image.png",
+              title: "The Green Knight",
+              tags: ["CSS3", "HTML5", "JavaScript"],
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
+              githubVector: "/img/vector-10.svg",
+              projectVector: "/img/vector-2.svg",
+            },
+            {
+              id: 2,
+              image: "/img/project-image-3.png",
+              title: "The Green Knight",
+              tags: ["CSS3", "HTML5", "JavaScript"],
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
+              githubVector: "/img/vector-6.svg",
+              projectVector: "/img/vector-3.svg",
+            },
+            {
+              id: 3,
+              image: "/img/project-image.png",
+              title: "The Green Knight",
+              tags: ["CSS3", "HTML5", "JavaScript"],
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
+              githubVector: "/img/vector.svg",
+              projectVector: "/img/vector-5.svg",
+            },
+            {
+              id: 4,
+              image: "/img/project-image-2.png",
+              title: "The Green Knight",
+              tags: ["CSS3", "HTML5", "JavaScript"],
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis, velit vitae rutrum venenatis, elit orci aliquam risus, et hendrerit nunc nulla at odio. Morbi hendrerit hendrerit aliquam. Duis tristique tortor orci, ut finibus magna condimentum eu. Nullam vel nibh quis metus pulvinar aliquam. Quisque euismod varius aliquam.",
+              githubVector: "/img/vector-7.svg",
+              projectVector: "/img/vector-8.svg",
+            },
+          ].map((project) => (
+            <div key={project.id} className="project-card">
+              <img
+                className="project-image"
+                src={project.image}
+                alt={project.title}
+              />
+              <div className="project-info">
+                <div className="frame-3">
+                  <div className="frame-4">
+                    <div className="project-title">{project.title}</div>
+                    <div className="project-tags">
+                      {project.tags.map((tag) => (
+                        <div key={tag} className="project-tag">
+                          <div className="project-tag-2">{tag}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="project-description">{project.description}</p>
+                </div>
+                <div className="frame-5">
+                  <div className="project-links">
+                    <button className="button">
+                      <div className="button-2">Github Repo</div>
+                      <div className="vector-wrapper">
+                        <img className="vector" src={project.githubVector} alt="github" />
+                      </div>
+                    </button>
+                    <button className="button-3">
+                      <div className="button-4">Open Project</div>
+                      <div className="vector-wrapper">
+                        <img className="vector-2" src={project.projectVector} alt="open" />
+                      </div>
+                    </button>
+                  </div>
+                  <div className="project-description-wrapper">
+                    <div className="project-description-2">Read More</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="div-2">
+        <div className="contact-info">
+          <div className="contact-title">
+            <div className="text-wrapper-2">Let's Work Together</div>
+            <img className="line-2" src="/img/line-1-2.svg" alt="line" />
+          </div>
+          <div className="text-wrapper-3">Iloilo, Philippines</div>
+          <div className="text-wrapper-3">gelcabalfin@gmail.com</div>
+        </div>
+        <div className="div-3">
+          <p className="contact-copyright">© John Angelo Cabalfin 2026</p>
+        </div>
+        <div className="social-links">
+          <div className="img-wrapper">
+            <img className="vector" src="/img/vector-9.svg" alt="social-1" />
+          </div>
+          <div className="img-wrapper">
+            <img className="vector-2" src="/img/vector-4.svg" alt="social-2" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

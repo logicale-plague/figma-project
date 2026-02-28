@@ -1,0 +1,11 @@
+:root {
+  --primary: rgba(0, 0, 0, 0.94);
+  --purple-accent: rgba(224, 64, 251, 1);
+  --body: rgba(255, 255, 255, 1);
+  --primary-font-family: "Inter", Helvetica;
+  --primary-font-weight: 400;
+  --primary-font-size: 24px;
+  --primary-letter-spacing: 0px;
+  --primary-line-height: normal;
+  --primary-font-style: normal;
+}
