@@ -98,7 +98,7 @@ export default function Home() {
           </p>
           <img className="line" src="/img/line-1.svg" alt="line" />
           <p className="intro-description">
-            I'm a Computer Science graduate from Iloilo who enjoys building structured, maintainable
+            I'm a Computer Science student from CPU who enjoys building structured, maintainable
             systems that solve real-world problems. With a foundation in software development and a
             growing interest in UX, I focus on clarity, usability, and long-term thinking.
           </p>
@@ -120,17 +120,16 @@ export default function Home() {
           <div className="frame-2">
             <div className="about-me-title">About Me</div>
             <p className="about-me-description">
-              I'm currently staying in Iloilo city with the dream of breaking into tech. I'm drawn
+              I'm currently staying in Pavia, Iloilo with the dream of breaking into tech. I'm drawn
               to building structured, reliable systems designed with long-term clarity in mind.
               <br />
               <br />
-              Outside of tech, I volunteer at local animal shelters — an experience that has shaped
-              my sense of responsibility and patience. <br />
+              Outside of programming, I am also a game tester and enjoy exploring new games and mechanics. <br />
               <br />I'm also inspired by fantasy literature, where thoughtful world-building and
               strong systems bring stories to life.
               <br />
               <br />
-              To me, good software — like good stories — is built with care and meant to endure.
+              To me, good software are those which are scalable, maintainable, and designed with the user in mind. I strive to create solutions that not only meet immediate needs but also adapt to future challenges, ensuring a seamless and intuitive experience for users.
             </p>
           </div>
           <div className="image">
